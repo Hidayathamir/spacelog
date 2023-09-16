@@ -11,7 +11,7 @@ This will start the Spacelog application and you can access the documentation at
 2. Run the app using Docker Compose:
 
 ```bash
-sudo docker-compose up
+sudo docker compose up
 ```
 
 3. Open http://localhost:8000/docs in your web browser.
