@@ -14,6 +14,10 @@ This will start the Spacelog application and you can access the documentation at
 sudo docker compose up
 ```
 
-3. Open swagger docs http://localhost:8000/docs in your web browser. In there you can find api to get log by trace id.
+3. Open Spacelog user interface on http://localhost:8501 in your web browser. In there you can use trace id to get log.
+
+![assets/simple_ui_streamlit.png](assets/simple_ui_streamlit.png)
+
+4. You can also open swagger docs http://localhost:8000/docs in your web browser. In there you can find api to get log by trace id.
 
 ![assets/swagger_docs_api_get_log_by_trace_id.png](assets/swagger_docs_api_get_log_by_trace_id.png)

@@ -4,8 +4,18 @@ services:
   fastapi-app:
     image: tiangolo/uvicorn-gunicorn-fastapi:python3.10-2023-09-11
     container_name: spacelog-container
-    command: bash -c "pip install -r requirements.txt && uvicorn main:app --host 0.0.0.0 --port 8000"
+    command: bash -c "pip install --no-cache-dir -r requirements.txt && uvicorn main:app --host 0.0.0.0 --port 8000"
     volumes:
       - .:/app
     ports:
       - "8000:8000"
+    working_dir: /app
+  streamlit-app:
+    image: python:3.10.13-slim
+    container_name: simple-ui-streamlit
+    command: bash -c "pip install --no-cache-dir -r requirements.txt && streamlit run --server.address 0.0.0.0 simple_ui_streamlit.py"
+    volumes:
+      - .:/app
+    ports:
+      - "8501:8501"
+    working_dir: /app
